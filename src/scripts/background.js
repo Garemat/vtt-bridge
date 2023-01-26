@@ -2,7 +2,7 @@ import { messageType } from "../common";
 
 let queue = [];
 
-browser.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   switch (message.type) {
     case messageType.enqueue:
       queue.push(...message.commands);

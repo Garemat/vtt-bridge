@@ -17,7 +17,7 @@ store.subscribe((state) => {
     const { toast, commands } = parseState(state);
     showToast(toast);
     console.debug(`Showed command toast: ${toast}`);
-    browser.runtime.sendMessage({ type: messageType.enqueue, commands });
+    chrome.runtime.sendMessage({ type: messageType.enqueue, commands });
     console.debug(`Sent commands to background: ${JSON.stringify(commands)}`);
   } else if (state.error !== lastError) {
     showError(formatError(state.error));

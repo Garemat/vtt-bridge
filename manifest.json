@@ -1,7 +1,6 @@
 {
   "manifest_version": 3,
   "name": "VTT Bridge",
-
   "version": "1.6.4",
   "browser_specific_settings": {
     "gecko": {
@@ -9,11 +8,8 @@
     }
   },
   "description": "Connect Dungeon Master's Vault to Roll20.",
- 
-
   "background": {
-    "service_worker": "wrapper.js",
-    "type": "module"
+    "service_worker": "background.js"
   },
   "icons": {
     "48": "icons/48.png",
@@ -27,7 +23,7 @@
     "page": "config.html",
     "open_in_tab": false
   },
-    "browser_action": {
+    "action": {
       "default_popup": "config.html"
     },
   "content_scripts": [
